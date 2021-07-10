@@ -6,6 +6,9 @@ public class CameraMovement : MonoBehaviour
 {
  public GameObject player;
  public Vector3 offset;
+ public Transform Target;
+ public float Speed = 1f;
+ public Vector3 Offset;
  
  void Start()
  {
@@ -14,10 +17,10 @@ public class CameraMovement : MonoBehaviour
  
  void LateUpdate()
  {
-     float newXPosition = player.transform.position.x + offset.x;
-     float newYPosition = player.transform.position.y + offset.y;
-     float newZPosition = player.transform.position.z + offset.z;
- 
-     transform.position = new Vector3(newXPosition, newYPosition, newZPosition);
+    float newXPosition = player.transform.position.x + offset.x;
+    float newYPosition = player.transform.position.y + offset.y;
+    float newZPosition = player.transform.position.z + offset.z;
+
+    transform.position = new Vector3(newXPosition, newYPosition, newZPosition);
  }
 }
